@@ -21,7 +21,7 @@ const myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
-const foundZ = nestedLetters[2][1]
+const foundZ = nestedLetters[5][2][1];
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -75,7 +75,7 @@ const compareNums = (num1, num2) => {
     For example, if we passed in 'Sharknado', 
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
-let bestMovie = title => `${title} is the best movie ever!`;
+let bestMovie = movie => `${movie} is the best movie ever!`;
 //CODE HERE
   
   
@@ -163,7 +163,7 @@ const classes = [
       homework: true
     }
   ]
-//DO NOT EDIT CODE ABOVE
+// //DO NOT EDIT CODE ABOVE
   
 /*
     Write a for loop that loops over the classes array,
@@ -173,16 +173,16 @@ const classes = [
     all online classes with no homework.
 */
 for (let i = 0; i < classes.length; i ++) {
-    for (let key in i) {
+    for (let key in classes[i]) {
         if (classes[i][key] === true) {
             classes[i][key] = false
         }
     }
 }
-//CODE HERE
+// //CODE HERE
 
   
-////////////////////PROBLEM 10////////////////////
+// ////////////////////PROBLEM 10////////////////////
 /*
     Use nested for loops to compare the letters in the lettersToPair array below.
     When you find a pair, push the indexes of the letters into the pairsArray as an array.
@@ -195,11 +195,11 @@ const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']
 let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
-//CODE HERE
+// //CODE HERE
 for (let i = 0; i < lettersToPair.length; i ++) {
-    for (let j = 0; j < lettersToPair[i].length; j ++){
+    for (let j = i + 1; j < lettersToPair.length; j ++){
         if (lettersToPair[i] === lettersToPair[j]){
-            pairsArray.push(lettersToPair[i])
+            pairsArray.push([i,j])
        }
     }
 }
@@ -264,6 +264,7 @@ const fidoSpeak = bark.call(fido)
 */
 function teachTrick(trick) {
     this.tricks.push(trick)
+    return this.tricks
 }
 //CODE HERE
 

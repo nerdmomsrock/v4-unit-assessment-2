@@ -34,6 +34,11 @@ let foods = [
   Calories can be calculated by multiplying carbs by 4, protein by 4, fat by 9, 
   and then adding the results together. 
 */
+foods.forEach((elem)=> {
+   for (let key in foods[i]) {
+     [elem].calories = 
+   }
+})
 
 //CODE HERE
 
@@ -79,7 +84,10 @@ const products = [
   Using the map method, make a copy of your products array with the prices reduced by 25%. 
   Save the copy to a new variable called 'saleProducts'.
 */
-
+const saleProducts = products.map(function(val){
+     products.price = val - val * .25
+   
+})
 //CODE HERE
 
 ////////////////////PROBLEM 3////////////////////
@@ -89,7 +97,9 @@ const products = [
   to a new variable called 'blueProducts'. 
   (Hint: look up the array method 'includes' on MDN)
 */
-
+const blueProducts = saleProducts.filter((val)=> {
+  return val.includes('blue')
+})
 //CODE HERE
 
 ////////////////////PROBLEM 4////////////////////
